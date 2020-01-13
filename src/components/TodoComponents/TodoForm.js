@@ -29,8 +29,9 @@ class TodoForm extends Component
                     name='item' 
                     value={this.state.newItem} 
                     onChange={this.handleChange}
+                    placeholder='Enter new todo item'
                 />
-                <button>Add New Todo</button>
+                <button className='new-btn'>Add New Todo</button>
             </form>
         );
     }

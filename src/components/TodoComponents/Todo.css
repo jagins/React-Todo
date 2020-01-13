@@ -1,8 +1,48 @@
+.App
+{
+    text-align: center;
+    margin-top: 5%;
+}
+
 .item
 {
     cursor: pointer;
+    font-size: 1.5rem;
+    color: #F5F0F6
 }
+
 .item.finished
 {
-   text-decoration: line-through;
+   text-decoration: #536271 double line-through;
+   text-decoration-thickness: 30px;
+}
+
+.clear-btn
+{
+    margin-right: 11%;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    font-size: 1.5rem;
+}
+
+input
+{
+    margin-right: 2.5%;
+    line-height: 20px;
+    font-size: 1.5rem;
+}
+
+.Title
+{
+    font-size: 3rem;
+    color: #F5F0F6;
+}
+
+.new-btn
+{
+    font-size: 1.5rem;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(89,89,89,1) 50%, rgba(132,130,143,1) 100%, rgba(0,0,0,1) 220%);
 }
