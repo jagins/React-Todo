@@ -32,7 +32,7 @@ class App extends Component
   {
     super();
     this.state = {
-      todoList: data
+      todos: data
     }
   }
   render() 
@@ -40,7 +40,7 @@ class App extends Component
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList/>
+        <TodoList todoItems={this.state.todos}/>
         <TodoForm/>
       </div>
     );
