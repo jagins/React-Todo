@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import TodoList from './components/TodoComponents/TodoList'
 import TodoForm from './components/TodoComponents/TodoForm';
 import './components/TodoComponents/Todo.css';
@@ -47,6 +46,7 @@ class App extends Component
     }
 
     this.setState({todoList: [...this.state.todoList, newTodo]});
+    alert(`${newTodo.name} has been added to the list`)
   }
 
   toggleTodo = id =>
