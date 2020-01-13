@@ -11,7 +11,7 @@ function TodoList(props)
             (
                 <Todo key={item.id} item={item} toggleTodo={props.toggleTodo}/>
             ))}
-            <button className='clear-btn'>Clear Todos</button>
+            <button className='clear-btn' onClick={props.clearCompleted}>Clear Completed</button>
         </div>
     );
 }
