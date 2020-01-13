@@ -35,13 +35,46 @@ class App extends Component
       todos: data
     }
   }
+
+  addNewTodo = todoName =>
+  {
+    const newTodo = 
+    {
+      name: todoName,
+      id: Date.now(),
+      isFinished: false
+    }
+
+    this.setState({todos: [...this.state.todos, newTodo]});
+  }
+
+  toggleTodo = id =>
+  {
+    const newTodos = this.state.todos.map(item => {
+      if(item.id === id)
+      {
+        return {
+          ...item,
+          isFinished: !item.isFinished
+        };
+      }
+      else
+      {
+        return item;
+      }
+    });
+  }
+
   render() 
   {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList todoItems={this.state.todos}/>
-        <TodoForm/>
+        <TodoList 
+          todoItems={this.state.todos} 
+          toggleTodo={this.toggleTodo}/>
+        
+        <TodoForm addNewTodo={this.addNewTodo} />
       </div>
     );
   }
