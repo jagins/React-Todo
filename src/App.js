@@ -70,8 +70,12 @@ class App extends Component
 
   clearCompleted = () =>
   {
-    const temp = this.state.todoList.filter(item => !item.isFinished)
-    this.setState({todoList: temp});
+    const answer = window.confirm("Are you sure you want to clear the completed items?")
+    if(answer)
+    {
+      const temp = this.state.todoList.filter(item => !item.isFinished)
+      this.setState({todoList: temp});
+    }
   }
 
   render() 
