@@ -17,6 +17,7 @@ class TodoForm extends Component
     {
         event.preventDefault();
         this.props.addNewTodo(this.state.newItem);
+        this.setState({newItem: ''});
     }
 
     render()
