@@ -33,7 +33,7 @@ class App extends Component
   {
     super();
     this.state = {
-      todos: data
+      todoList: data
     }
   }
 
@@ -46,12 +46,12 @@ class App extends Component
       isFinished: false
     }
 
-    this.setState({todos: [...this.state.todos, newTodo]});
+    this.setState({todoList: [...this.state.todoList, newTodo]});
   }
 
   toggleTodo = id =>
   {
-    const newTodos = this.state.todos.map(item => {
+    const newTodoList = this.state.todoList.map(item => {
       if(item.id === id)
       {
         return {
@@ -65,13 +65,13 @@ class App extends Component
       }
     });
 
-    this.setState({todos: newTodos});
+    this.setState({todoList: newTodoList});
   }
 
   clearCompleted = () =>
   {
-    const temp = this.state.todos.filter(item => !item.isFinished)
-    this.setState({todos: temp});
+    const temp = this.state.todoList.filter(item => !item.isFinished)
+    this.setState({todoList: temp});
   }
 
   render() 
@@ -80,7 +80,7 @@ class App extends Component
       <div>
         <h2>Welcome to your Todo App!</h2>
         <TodoList 
-          todoItems={this.state.todos} 
+          todoItems={this.state.todoList} 
           toggleTodo={this.toggleTodo}
           clearCompleted={this.clearCompleted}/>
         
