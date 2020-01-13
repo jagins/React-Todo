@@ -14,7 +14,6 @@
 .item.finished
 {
    text-decoration: #536271 double line-through;
-   text-decoration-thickness: 30px;
 }
 
 .clear-btn
