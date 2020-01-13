@@ -63,6 +63,8 @@ class App extends Component
         return item;
       }
     });
+
+    this.setState({todos: newTodos});
   }
 
   render() 
